@@ -1,4 +1,21 @@
+//This is disabled in html <post-answer-dir></post-answer-dir>
 angular.module("quizApp")
+  .directive("postAnswerDir", function($scope) {
+    return {
+      // scope: {},
+      restrict: "E",
+      replace: true, //makes it easier to go into the children of the div
+      template: "<div>\n  <input type=\"text\" placeholder=\"answer\" ng-model=\"userAns\">\n  <button type=\"submit\" ng-click=\"counterInc()\">Submit</button>\n </div>",
+      link: function(scope) {
+        scope.$watch('userAns', function(value) {
+          if (value === $scope.item[$scope.counter].answer) {
+            console.log("This is the val: " + value);
+          }
+
+        })
+      }
+    }
+  })
   .controller("myCtrl", function($scope, myService) {
     $scope.item = {} //to iterate over in ng-repeat
     $scope.counter = 1; //to increment on click
@@ -18,7 +35,6 @@ angular.module("quizApp")
       $scope.item = data.data;
       // console.log($scope.item);
     })
-
 
     // console.log("userResponses:");
     // console.dir($scope.userResponses.total.correct);
@@ -41,11 +57,7 @@ angular.module("quizApp")
         $scope.userResponses.trivia.incorrect++;
         console.log("Wrong!");
       }
-      // $scope.scores();
-      console.log("$.uR.total.corr: " + $scope.userResponses.total.correct);
     }
-
-
     $scope.scores = function() {
       $scope.summary = $scope.userResponses.total;
       $scope.sumTrivia = $scope.userResponses.trivia;

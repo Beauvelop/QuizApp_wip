@@ -1,0 +1,56 @@
+[{
+  "id": "00",
+  "title": "trivia_0",
+  "topic": "placehoder",
+  "difficulty": "placehoder",
+  "question": "placehoder = function() {\r\n    placehoder(\"placehoder\");\r\n}",
+  "answer": "placehoder",
+  "comments": "placehoder placehoder placehoder.",
+  "anotherKey": "placehoderField"
+
+}, {
+  "id": "01",
+  "title": "trivia_1",
+  "topic": "alert",
+  "difficulty": "1",
+  "question": "var myfunc = function() {\r\n    alert(\"Hello World\");\r\n}",
+  "answer": "Hello World",
+  "comments": "This one is pretty easy.",
+  "anotherKey": "anotherField"
+}, {
+  "id": "02",
+  "title": "trivia_3",
+  "topic": "phys",
+  "difficulty": "1",
+  "question": "What is h20?",
+  "answer": "water",
+  "comments": "Incredibly easy.",
+  "anotherKey": "anotherField"
+}, {
+  "id": "03",
+  "title": "trivia_4",
+  "topic": "hardware",
+  "difficulty": "8",
+  "question": "What is the computer's 'brain'?",
+  "answer": "CPU",
+  "comments": "This is a fun one.",
+  "anotherKey": "anotherField"
+}, {
+  "id": "trivia_5",
+  "title": "Data Science",
+  "topic": "Security",
+  "difficulty": "7",
+  "question": "comparmentalizing & hiding data is one of the purposes of what Greek God of Agriculture?",
+  "answer": "Demeter",
+  "comments": "You have to know a bit of Greek Mythology for this one.",
+  "anotherKey": "anotherField"
+}, {
+  "id": "05",
+  "title": "code",
+  "topic": "javascript",
+  "difficulty": "6",
+  "question": "Promises are one example of ___________ of control",
+  "answer": "inversion",
+  "comments": "This is a tough one",
+  "anotherKey": "anotherField"
+}]

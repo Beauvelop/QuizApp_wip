@@ -3,7 +3,7 @@ angular.module("quizApp")
 
     var deferred = $q.defer();
 
-    $http.get('../dataObj.json')
+    $http.get('./dataObj.json')
       .then(function(data) {
         deferred.resolve(data);
       })

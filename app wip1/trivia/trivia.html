@@ -1,0 +1,27 @@
+<div class="navcontainer">
+<nav>
+    <p><a class="nav" ui-sref="vocab">Vocab page</a></p>
+    <p><a class="nav" ui-sref="home">Home page</a></p>
+    <p><a class="nav" ui-sref="cascade">CSS page</a></p>
+</nav>
+</div>
+<h1>Welcome to Trivia!</h1>
+
+<div class="prollemBox" ng-repeat="Q in item | limitTo: 1: counter">
+      <div class="qHeader">
+        <h3>#{{Q.id}}</h3>
+        <h3>Title: {{Q.title}}</h3>
+        <h3>Topic: {{Q.topic}}</h3>
+        <h3>difficulty: {{Q.difficulty}}</h3>
+</div>
+    <hr>
+    <div class="qBox">
+    <code>{{Q.question}}</code></div>
+    <h3>Answer: {{Q.answer}}</h3>
+    <h3>Comments: {{Q.comments}}</h3>
+    <form ng-submit="onSubmit(userAns)">
+    <input type="text" placeholder="answer" ng-model="userAns" ng-blur="responseSet(userAns)">
+
+<button type="submit" ng-click="counterInc()">Submit</button>
+    </form>
+</div>

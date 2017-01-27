@@ -3,40 +3,29 @@
 
 <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="../styles.css">
-    <title>quizApp</title>
+    <link rel="stylesheet" href="./styles.css">
+    <title>🤓quizApp</title>
 </head>
 <body ng-controller="myCtrl">
-    <h4>🤓quizApp💻</h4>
-    <sup>Total Correct:{{summary.correct}}<br>
-      Total Wrong:{{summary.incorrect}}<br>
-      Trivia Correct:{{sumTrivia.correct}}<br>
-      Trivia Wrong:{{sumTrivia.incorrect}}</sup>
-
-    <div class="prollemBox" ng-repeat="Q in item | limitTo: 1: counter">
-          <div class="qHeader">
-            <h3>#{{Q.id}}</h3>
-            <h3>Title: {{Q.title}}</h3>
-            <h3>Topic: {{Q.topic}}</h3>
-            <h3>difficulty: {{Q.difficulty}}</h3>
+  <div class="scores"><h5>Total Correct:{{summary.correct}}<br>
+    Total Wrong:{{summary.incorrect}}<br>
+    Trivia Correct:{{sumTrivia.correct}}<br>
+    Trivia Wrong:{{sumTrivia.incorrect}}</sup>
     </div>
-        <hr>
-        <div class="qBox">
-        <code>{{Q.question}}</code></div>
-        <h3>Answer: {{Q.answer}}</h3>
-        <h3>Comments: {{Q.comments}}</h3>
-        <form ng-submit="onSubmit(userAns)">
-        <input type="text" placeholder="answer" ng-model="userAns" ng-blur="responseSet(userAns)">
+    <h5>🤓quizApp</h5>
+    <ui-view>Loading...</ui-view>
 
-  <button type="submit" ng-click="counterInc()">Submit</button>
-        </form>
-    </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.js"></script></script>
     <script src="./app.js"></script>
     <script src="./controller.js"></script>
     <script src="./service.js"></script>
-    <!-- <script src="./home/home.html"></script> -->
+    <!-- <script src="./postAnswerDir.js"></script> NB: for directive-->
+    <script src="./home/homeCtrl.js"></script>
+    <script src="./trivia/triviaCtrl.js"></script>
+    <script src="./vocab/vocabCtrl.js"></script>
+    <script src="./cascade/cascadeCtrl.js"></script>
     <!-- <script src="./states/state2.html"></script>
     <script src="./states/state3.html"></script> -->
     <script src="../dataObj.json"></script>
