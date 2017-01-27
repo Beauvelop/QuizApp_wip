@@ -7,28 +7,29 @@
     <title>quizApp</title>
 </head>
 <body ng-controller="myCtrl">
-    <h1>🤓quizApp💻</h1>
+    <h4>🤓quizApp💻</h4>
+    <sup>Total Correct:{{summary.correct}}<br>
+      Total Wrong:{{summary.incorrect}}<br>
+      Trivia Correct:{{sumTrivia.correct}}<br>
+      Trivia Wrong:{{sumTrivia.incorrect}}</sup>
 
-counter {{counter}}
-<!-- limitTo:1 -->
     <div class="prollemBox" ng-repeat="Q in item | limitTo: 1: counter">
-<!-- {{item}} -->
-<!-- <div class="prollemBox"> -->
           <div class="qHeader">
             <h3>#{{Q.id}}</h3>
             <h3>Title: {{Q.title}}</h3>
             <h3>Topic: {{Q.topic}}</h3>
             <h3>difficulty: {{Q.difficulty}}</h3>
-        </div>
+    </div>
         <hr>
         <div class="qBox">
         <code>{{Q.question}}</code></div>
         <h3>Answer: {{Q.answer}}</h3>
         <h3>Comments: {{Q.comments}}</h3>
-        <!-- <form class="" method="post"> -->
-        <input type="text" placeholder="answer" ng-model="userResponse.q1">
-        <button type="submit" ng-click="onSubmit(userResponse.q1)">Submit</button>
-        <!-- </form> -->
+        <form ng-submit="onSubmit(userAns)">
+        <input type="text" placeholder="answer" ng-model="userAns" ng-blur="responseSet(userAns)">
+
+  <button type="submit" ng-click="counterInc()">Submit</button>
+        </form>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.js"></script>

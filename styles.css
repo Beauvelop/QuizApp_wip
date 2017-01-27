@@ -2,7 +2,9 @@
 * {
     font-weight: lighter;
 }
-
+sup {
+  font-size: .4em;
+}
 body {
     background: rgb(30, 44, 54);
     color: rgb(158, 218, 226);
