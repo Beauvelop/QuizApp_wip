@@ -1,0 +1,67 @@
+
+* {
+    font-weight: lighter;
+}
+
+body {
+    background: rgb(30, 44, 54);
+    color: rgb(158, 218, 226);
+    font-size: 1.8em;
+    font-weight: lighter;
+    text-align: center;
+}
+.prollemBox {
+    position: relative;
+    text-align: left;
+    margin: 20vh 10vw;
+    border: 2px solid wheat;
+    padding: 0% 5%;
+    font-size: .5em;
+    background-color: rgba(138, 143, 150, .16);
+}
+
+input {
+    text-align: center;
+    height: 1.5em;
+    width: 8em;
+    margin: auto;
+    color: coral;
+    font-size: 1.2em;
+    background: black;
+}
+.qBox {
+  text-align: left;
+  font-size: 2em;
+  height: 20vh;
+}
+
+code {
+  display: inline-block;
+  white-space: pre-line;
+}
+
+button {
+    border: 2px solid white;
+    font-size: 1.5em;
+    color: maroon;
+    background-color: rgb(131,214,179);
+    height: 7vh;
+    width: 10vw;
+    bottom: 2%;
+    right: 2%;
+    border: 2px solid green;
+    float: right;
+    position: absolute;
+}
+
+.qHeader h3 {
+    display: inline-block;
+    /*justify-content: space-between;*/
+    color: coral;
+    margin: 0 3vw;
+    padding: 0, 500px;
+}
+
+.qHeader {
+    text-align: center;
+}
